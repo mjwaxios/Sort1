@@ -20,19 +20,19 @@ void bubbleSort(int size, int array[]) {
 
 void main (int argc, char *argv[])
 {
-	if(argc != 12)
+	if(argc < 3)
 	{
 		printf("Please enter 10 integers and the number for your selected sort.");
 	}
 	else
 	{
-		int size = 10;
+		int size = argc - 2;
 		int arr[size];
 		for(int i=0;i<size;i++)
 		{
-			arr[i] = atoi(argv[i+1]);
+			arr[i] = atoi(argv[i+2]);
 		}
-		if(atoi(argv[size+1]) == 1)
+		if(atoi(argv[1]) == 1)
 		{
 			bubbleSort(size,arr);
                         printf("\n");
